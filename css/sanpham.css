@@ -1,0 +1,130 @@
+/* ======== PRODUCT GRID (Trang sanpham.html) ======== */
+.product-grid {
+    padding: 50px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 20px auto;
+    width: 90%;
+}
+
+/* ======== THIẾT KẾ THẺ SẢN PHẨM ======== */
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; 
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-container {
+    background-color: #f9f9f9; 
+    padding: 20px;
+}
+
+.product-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; 
+}
+
+.product-info {
+    padding: 20px;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff; 
+    margin-bottom: 15px;
+    margin-top: auto; 
+}
+
+/* Nhóm nút "Thêm vào giỏ" và "Mua ngay" */
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.product-actions .btn {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 0.85rem;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.btn-add-cart {
+    background-color: #ffffff;
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.btn-add-cart:hover {
+    background-color: #f0f8ff;
+}
+
+.btn-buy-now {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+.btn-buy-now:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+
+/* ======== RESPONSIVE (Riêng cho sanpham.html) ======== */
+@media (max-width: 992px) {
+    .grid-container {
+        
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        
+        grid-template-columns: 1fr;
+    }
+
+   
+    .product-actions {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,227 @@
+/* ======== CÀI ĐẶT CHUNG (GLOBAL) ======== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* ======== HEADER ======== */
+.main-header {
+    background-color: transparent; 
+    color: white; 
+    padding: 20px 0; 
+    
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: inline-block;
+    background-color: transparent;
+    padding: 0;
+    font-size: 0;
+}
+
+.logo img {
+    display: block;
+    width: auto;
+}
+
+
+.main-header .logo img {
+    height: 35px; 
+    /* filter: brightness(0) invert(1); */
+}
+
+
+.main-footer .logo img {
+    height: 35px; 
+   
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+
+.main-nav a {
+    color: white; 
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+    color: #fdd835; 
+}
+
+.cart-icon {
+    font-size: 1.5rem;
+    color: white; 
+}
+
+/* ======== HERO SECTION (CHUNG) ======== */
+.hero-section {
+    position: relative;
+    height: 450px;
+    background-image: url('../images/bg.jpg'); /* Đảm bảo đường dẫn này đúng */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1; /* Đặt z-index để quản lý lớp */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0; 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.btn-light {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-light:hover {
+    background-color: white;
+    color: #333;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2; 
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 10px;
+}
+.slider-arrow.left { left: 20px; }
+.slider-arrow.right { right: 20px; }
+
+/* ======== FOOTER (CHUNG) ======== */
+.main-footer {
+    background-color: #ffeb3b; 
+    color: #333;
+    padding: 15px 0;
+    position: relative;
+    z-index: 500;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+/* ======== RESPONSIVE (CHUNG) ======== */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .main-footer .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
