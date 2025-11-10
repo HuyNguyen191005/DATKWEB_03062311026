@@ -1,0 +1,212 @@
+/* ======== CSS CHO TRANG GIỎ HÀNG ======== */
+
+/* Khu vực nội dung chính (nền trắng) */
+.cart-section {
+    background-color: #ffffff;
+    padding: 40px 0;
+    /* Đẩy nội dung xuống dưới Header (vì Header là absolute) */
+    /* Bạn có thể cần điều chỉnh giá trị này */
+    margin-top: -50px; 
+    position: relative;
+    z-index: 50; /* Nằm trên hero nhưng dưới header */
+}
+
+.back-link {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #555;
+    text-decoration: none;
+}
+
+.cart-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 15px 0 30px 0;
+    color: #333;
+}
+
+/* Bố cục 2 cột đơn giản */
+.cart-layout {
+    display: flex;
+    gap: 30px; /* Khoảng cách giữa 2 cột */
+}
+
+/* Cột bên trái (danh sách) */
+.cart-items-list {
+    flex: 2; /* Chiếm 2/3 không gian */
+}
+
+/* Thẻ của từng món hàng */
+.cart-item {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 15px; /* Khoảng cách giữa ảnh, chữ, số lượng */
+    
+    background-color: #f0f0f0; /* Nền xám nhạt */
+    padding: 20px;
+    margin-bottom: 15px;
+    position: relative; /* Để định vị nút Xóa */
+}
+
+.item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* Giữ tỷ lệ ảnh */
+    background-color: #fff; /* Nền trắng cho ảnh */
+    border: 1px solid #eee;
+}
+
+.item-details {
+    flex-grow: 1; /* Lấp đầy không gian còn lại */
+}
+
+.item-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #222;
+}
+.item-model {
+    font-size: 0.9rem;
+    color: #666;
+}
+.item-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+.item-meta {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Ô nhập số lượng (GIỮ ĐƠN GIẢN) */
+.item-quantity input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Ẩn mũi tên mặc định của input number trên Chrome/Safari */
+.item-quantity input::-webkit-outer-spin-button,
+.item-quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Ẩn mũi tên trên Firefox */
+.item-quantity input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Nút Xóa (dấu X) */
+.item-remove {
+    position: absolute;
+    top: 15px; /* Dịch xuống 1 chút */
+    right: 15px;
+    font-size: 1.2rem; /* Giảm kích thước icon */
+    color: #d9534f; 
+    text-decoration: none;
+}
+.item-remove:hover {
+    color: #c9302c; /* Đỏ đậm hơn */
+}
+
+
+/* Cột bên phải (tóm tắt) */
+.cart-summary {
+    flex: 1; /* Chiếm 1/3 không gian */
+}
+
+/* Kiểu chung cho 2 nút cam và đen */
+.cart-summary .btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btn-continue {
+    background-color: #e67e22; /* Màu cam */
+}
+.btn-continue:hover {
+    background-color: #d35400;
+}
+
+.btn-order {
+    background-color: #222; /* Màu đen */
+}
+.btn-order:hover {
+    background-color: #444;
+}
+
+.cart-summary h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between; /* Đẩy chữ và số ra 2 bên */
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+/* Form nhập Coupon */
+.coupon-form {
+    display: flex;
+    margin-bottom: 10px;
+}
+.coupon-form input {
+    flex-grow: 1; /* Ô input chiếm hết chỗ */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-right: none;
+}
+.coupon-form button {
+    padding: 10px 15px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.login-link {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/* --- Responsive cho điện thoại --- */
+@media (max-width: 768px) {
+    .cart-layout {
+        flex-direction: column; /* Xếp 2 cột chồng lên nhau */
+    }
+    
+    .cart-summary {
+        /* Đảo thứ tự: Đẩy tóm tắt lên trên danh sách */
+        /* (Nếu bạn muốn, nếu không thì bỏ dòng này) */
+        /* order: -1; */ 
+        margin-top: 20px;
+    }
+    
+    .cart-item {
+        flex-direction: column; /* Xếp ảnh, chữ, số lượng chồng lên nhau */
+        align-items: flex-start; /* Căn trái */
+    }
+    .item-image {
+        width: 100%;
+        height: 150px;
+    }
+    .item-quantity {
+        margin-top: 10px;
+    }
+}

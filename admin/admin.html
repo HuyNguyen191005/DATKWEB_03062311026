@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    
+    <link rel="stylesheet" href="./css/admin.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+</head>
+<body>
+
+    <div class="admin-container">
+        
+        <aside class="admin-sidebar">
+            <a href="#" class="admin-logo-top">SB ADMIN</a>
+            
+            <form class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            
+            <nav class="admin-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-box"></i> Products</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chart-bar"></i> Charts</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-users"></i> Staff</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cog"></i> Setting</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <a href="index.html" class="admin-logo-bottom">
+                <img src="images/logo-black.png" alt="The Bike Shop Logo">
+            </a>
+        </aside>
+        
+        <main class="admin-main-content">
+            
+            <header class="admin-header">
+                <div class="header-icons">
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                    <a href="#"><i class="fas fa-list-alt"></i></a>
+                    <a href="#"><i class="fas fa-bell"></i></a>
+                    <a href="#"><i class="fas fa-user-circle"></i></a>
+                </div>
+            </header>
+            
+            <section class="admin-dashboard">
+                <h1>Welcome to admin page</h1>
+                <h2>Dashboard</h2>
+                
+                <div class="stats-cards">
+                    <article class="stat-card earning">
+                        <div class="stat-info">
+                            <p>Earning(Monthly)</p>
+                            <strong>$40,000</strong>
+                            <span><i class="fas fa-arrow-up"></i> 34,8%</span>
+                        </div>
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                    </article>
+                    
+                    <article class="stat-card sales">
+                        <div class="stat-info">
+                            <p>Sales</p>
+                            <strong>650</strong>
+                            <span><i class="fas fa-arrow-up"></i> 12%</span> Since last years
+                        </div>
+                        <div class="stat-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </article>
+                    
+                    <article class="stat-card users">
+                        <div class="stat-info">
+                            <p>New users</p>
+                            <strong>366</strong>
+                            <span><i class="fas fa-arrow-up"></i> 20,4%</span> Since last month
+                        </div>
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="charts-area">
+                    
+                    <div class="chart-container large">
+                        <h3 class="chart-title">Monthly Recap Report</h3>
+                        <img src="images/monthly-chart.png" alt="Biểu đồ Báo cáo tháng">
+                    </div>
+                    
+                    <div class="chart-container small">
+                        <h3 class="chart-title">Products Sold</h3>
+                        <img src="images/products-chart.png" alt="Biểu đồ Sản phẩm đã bán">
+                    </div>
+                    
+                </div>
+                
+            </section>
+            
+        </main>
+        
+    </div>
+
+</body>
+</html>

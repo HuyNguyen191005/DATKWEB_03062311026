@@ -1,0 +1,365 @@
+/* ======== CSS CHO TRANG ADMIN DASHBOARD ======== */
+
+/* Cài đặt chung */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Nền xám rất nhạt */
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Bố cục chính */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR (Menu bên trái) --- */
+.admin-sidebar {
+    flex-basis: 250px; /* Chiều rộng cố định 250px */
+    flex-shrink: 0;
+    background-color: #f0f4f7; /* Nền xám xanh nhạt */
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column; /* Xếp chồng các mục */
+}
+
+.admin-logo-top {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+.search-bar input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-right: none;
+}
+.search-bar button {
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.admin-nav ul {
+    width: 100%;
+}
+.admin-nav li {
+    margin-bottom: 5px;
+}
+.admin-nav a {
+    display: block;
+    padding: 12px 15px;
+    border-radius: 5px;
+    color: #555;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+.admin-nav a i {
+    margin-right: 12px;
+    width: 20px; /* Giữ icon thẳng hàng */
+    text-align: center;
+}
+.admin-nav li.active a,
+.admin-nav a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.admin-logo-bottom {
+    margin-top: auto; /* Đẩy logo xuống dưới cùng */
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    display: block;
+}
+.admin-logo-bottom img {
+    height: 30px;
+    width: auto;
+    margin: 0 auto;
+}
+
+/* --- MAIN CONTENT (Nội dung chính) --- */
+.admin-main-content {
+    flex-grow: 1; /* Chiếm hết phần còn lại */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-header {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: flex-end; /* Đẩy icon sang phải */
+}
+
+.header-icons {
+    display: flex;
+    gap: 25px;
+}
+.header-icons a {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Khu vực Dashboard */
+.admin-dashboard {
+    padding: 30px;
+    flex-grow: 1;
+}
+.admin-dashboard h1 {
+    font-size: 1.5rem;
+    color: #555;
+    font-weight: normal;
+}
+.admin-dashboard h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0 20px 0;
+}
+
+/* 3 Thẻ thống kê */
+.stats-cards {
+    display: flex;
+    gap: 20px;
+}
+.stat-card {
+    flex: 1; /* Ba thẻ rộng bằng nhau */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stat-info p {
+    font-size: 0.9rem;
+    color: #777;
+}
+.stat-info strong {
+    font-size: 1.8rem;
+    display: block;
+    margin: 5px 0;
+}
+.stat-info span {
+    font-size: 0.9rem;
+    color: #555;
+}
+.stat-info span .fa-arrow-up {
+    color: #28a745; /* Màu xanh lá */
+}
+.stat-icon i {
+    font-size: 3rem;
+    opacity: 0.6;
+}
+/* Màu sắc riêng cho từng thẻ */
+.earning .stat-icon i { color: #6f42c1; } /* Tím */
+.sales .stat-icon i { color: #28a745; } /* Xanh lá */
+.users .stat-icon i { color: #17a2b8; } /* Xanh biển */
+
+/* Khu vực 2 biểu đồ (dùng ảnh) */
+.charts-area {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+.chart-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.chart-container.large {
+    flex: 2; /* Biểu đồ bên trái chiếm 2/3 */
+}
+.chart-container.small {
+    flex: 1; /* Biểu đồ bên phải chiếm 1/3 */
+}
+.chart-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+.chart-container img {
+    width: 100%; /* Ảnh tự co giãn theo container */
+    height: auto;
+}
+
+/* ======== CSS MỚI CHO FORM (Thêm vào cuối file admin.css) ======== */
+
+/* Link "Product Information" */
+.form-info-link {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #007bff;
+}
+
+/* Container cho form */
+.admin-form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Bố cục 2 cột */
+.form-layout {
+    display: flex;
+    gap: 30px;
+}
+.form-column {
+    flex: 1; /* Mỗi cột chiếm 50% */
+}
+
+/* Kiểu chung cho các trường input */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+.form-group label span {
+    color: #dc3545; /* Màu đỏ */
+}
+
+/* Kiểu cho input, select, textarea */
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9; /* Nền xám nhạt */
+    font-size: 0.95rem;
+}
+
+.form-group input[type="file"] {
+    width: 100%;
+}
+
+.form-group textarea {
+    resize: vertical; /* Cho phép kéo chiều cao */
+    min-height: 100px;
+}
+
+/* Nhóm nút bấm */
+.form-buttons {
+    margin-top: 30px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end; /* Đẩy nút sang phải */
+    gap: 15px;
+}
+
+/* Kiểu nút chung */
+.form-buttons .btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Nút Submit (Xanh) */
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+}
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Nút Exit (Cũng màu xanh, theo thiết kế) */
+.btn-exit {
+    background-color: #007bff;
+    color: white;
+}
+.btn-exit:hover {
+    background-color: #0056b3;
+}
+/* Nếu muốn nút Exit màu xám:
+.btn-exit {
+    background-color: #6c757d;
+    color: white;
+}
+.btn-exit:hover {
+    background-color: #5a6268;
+}
+*/
+
+
+/* --- Responsive cho Form --- */
+@media (max-width: 992px) {
+    .form-layout {
+        flex-direction: column; /* Xếp 2 cột chồng lên nhau */
+        gap: 0;
+    }
+}
+
+/* --- Responsive cho điện thoại --- */
+@media (max-width: 992px) {
+    .stats-cards {
+        flex-direction: column; /* Xếp chồng 3 thẻ */
+    }
+    .charts-area {
+        flex-direction: column; /* Xếp chồng 2 biểu đồ */
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-container {
+        flex-direction: column; /* Xếp sidebar lên trên main */
+    }
+    .admin-sidebar {
+        flex-basis: auto; /* Chiều rộng tự động */
+        position: static; /* Bỏ cố định */
+    }
+    .admin-header {
+        padding: 15px 20px;
+    }
+    .admin-dashboard {
+        padding: 20px;
+    }
+}
