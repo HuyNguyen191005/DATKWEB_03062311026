@@ -328,7 +328,145 @@ img {
     background-color: #5a6268;
 }
 */
+/* ======== CSS MỚI CHO TRANG QUẢN LÝ SẢN PHẨM (Thêm vào cuối file admin.css) ======== */
 
+/* Thanh Filter */
+.product-filters {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    align-items: center;
+    flex-wrap: wrap; /* Cho responsive */
+}
+.product-filters input[type="search"],
+.product-filters select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+.product-filters input[type="search"] {
+    flex-grow: 1; /* Cho thanh search dài ra */
+    min-width: 200px;
+}
+.product-filters .btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none; /* Dùng cho thẻ <a> */
+}
+.btn-refresh {
+    background-color: #007bff;
+}
+.btn-add-new {
+    background-color: #28a745; /* Xanh lá */
+}
+
+/* Bảng Sản Phẩm */
+.table-container {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow-x: auto; /* Cho phép cuộn ngang trên mobile */
+}
+.product-table {
+    width: 100%;
+    border-collapse: collapse; /* Gộp viền */
+}
+.product-table th,
+.product-table td {
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle; /* Căn giữa nội dung theo chiều dọc */
+    white-space: nowrap; /* Ngăn text xuống hàng */
+}
+.product-table thead {
+    background-color: #f8f9fa; /* Nền xám nhạt cho header */
+}
+.product-table th {
+    font-weight: bold;
+    color: #555;
+}
+.product-table tbody tr {
+    border-bottom: 1px solid #f0f0f0; /* Đường kẻ giữa các dòng */
+}
+.product-table tbody tr:last-child {
+    border-bottom: none;
+}
+.product-table img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+/* "Pill" cho Kích thước (Size) */
+.size-pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px; /* Bo tròn */
+    background-color: #e9ecef;
+    color: #495057;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+/* Nút Sửa / Xóa (Icon) */
+.operation-icons {
+    display: flex;
+    gap: 10px;
+}
+.btn-icon {
+    padding: 5px 8px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.btn-icon.btn-edit {
+    color: #007bff; /* Xanh */
+}
+.btn-icon.btn-edit:hover {
+    background-color: #e0f0ff;
+}
+.btn-icon.btn-delete {
+    color: #dc3545; /* Đỏ */
+}
+.btn-icon.btn-delete:hover {
+    background-color: #fbebee;
+}
+
+/* Phân trang (Pagination) */
+.pagination {
+    display: flex;
+    justify-content: flex-end; /* Đẩy sang phải */
+    align-items: center;
+    margin-top: 20px;
+}
+.pagination span {
+    margin-right: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+.pagination-nav a {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-left: 3px;
+    border-radius: 4px;
+    color: #007bff;
+}
+.pagination-nav a:hover {
+    background-color: #f0f0f0;
+}
 
 /* --- Responsive cho Form --- */
 @media (max-width: 992px) {

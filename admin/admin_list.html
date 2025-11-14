@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Quản lý Sản Phẩm</title>
+    
+    <link rel="stylesheet" href="css/admin.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+</head>
+<body>
+
+    <div class="admin-container">
+        
+        <aside class="admin-sidebar">
+            <a href="admin.html" class="admin-logo-top">SB ADMIN</a>
+            
+            <form class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            
+            <nav class="admin-nav">
+                <ul>
+                    <li>
+                        <a href="admin.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="admin-products-list.html"><i class="fas fa-box"></i> Products</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chart-bar"></i> Charts</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-users"></i> Staff</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-cog"></i> Setting</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <a href="index.html" class="admin-logo-bottom">
+                <img src="../images/logo2.png" alt="The Bike Shop Logo">
+            </a>
+        </aside>
+        
+        <main class="admin-main-content">
+            
+            <header class="admin-header">
+                <div class="header-icons">
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                    <a href="#"><i class="fas fa-list-alt"></i></a>
+                    <a href="#"><i class="fas fa-bell"></i></a>
+                    <a href="#"><i class="fas fa-user-circle"></i></a>
+                </div>
+            </header>
+            
+            <section class="admin-dashboard">
+                <h1>Welcome to admin page</h1>
+                
+                <div class="product-filters">
+                    <input type="search" placeholder="Search...">
+                    <select name="categories">
+                        <option value="">Categories</option>
+                        <option value="mountain">Mountain</option>
+                        <option value="road">Road</option>
+                    </select>
+                    <select name="status">
+                        <option value="">Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                    <button class="btn btn-refresh"><i class="fas fa-sync"></i> Refresh</button>
+                    <a href="admin_add.html" class="btn btn-add-new"><i class="fas fa-plus"></i> Add new</a>
+                </div>
+                
+                <div class="table-container">
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>#</th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Size</th>
+                                <th>Operation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>1</td>
+                                <td><img src="../images/bik1.jpg" alt="Xe dap"></td>
+                                <td>Xe đạp</td>
+                                <td>Road Bikes</td>
+                                <td>300$</td>
+                                <td>
+                                    <span class="size-pill">XS</span>
+                                    <span class="size-pill">M</span>
+                                    <span class="size-pill">S</span>
+                                </td>
+                                <td class="operation-icons">
+                                    <a href="#" class="btn-icon btn-edit" title="Sửa"><i class="fas fa-edit"></i></a>
+                                    <a href="#" class="btn-icon btn-delete" title="Xóa"><i class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>2</td>
+                                <td><img src="../images/bik2.jpg" alt="Xe dap"></td>
+                                <td>Xe đạp</td>
+                                <td>Road Bikes</td>
+                                <td>300$</td>
+                                <td>
+                                    <span class="size-pill">XS</span>
+                                    <span class="size-pill">M</span>
+                                    <span class="size-pill">S</span>
+                                </td>
+                                <td class="operation-icons">
+                                    <a href="#" class="btn-icon btn-edit" title="Sửa"><i class="fas fa-edit"></i></a>
+                                    <a href="#" class="btn-icon btn-delete" title="Xóa"><i class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>3</td>
+                                <td><img src="../images/bik3.jpg" alt="Xe dap"></td>
+                                <td>Xe đạp</td>
+                                <td>Road Bikes</td>
+                                <td>300$</td>
+                                <td>
+                                    <span class="size-pill">XS</span>
+                                    <span class="size-pill">M</span>
+                                    <span class="size-pill">S</span>
+                                </td>
+                                <td class="operation-icons">
+                                    <a href="#" class="btn-icon btn-edit" title="Sửa"><i class="fas fa-edit"></i></a>
+                                    <a href="#" class="btn-icon btn-delete" title="Xóa"><i class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            
+                            </tbody>
+                    </table>
+                </div>
+                
+                <div class="pagination">
+                    <span>Page 1/4</span>
+                    <div class="pagination-nav">
+                        <a href="#"><i class="fas fa-chevron-left"></i></a>
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+                
+            </section>
+            
+        </main>
+        
+    </div>
+
+</body>
+</html>
