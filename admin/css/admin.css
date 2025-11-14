@@ -85,7 +85,7 @@ img {
 }
 .admin-nav a i {
     margin-right: 12px;
-    width: 20px; /* Giữ icon thẳng hàng */
+    width: 20px; 
     text-align: center;
 }
 .admin-nav li.active a,
@@ -108,7 +108,7 @@ img {
 
 /* --- MAIN CONTENT (Nội dung chính) --- */
 .admin-main-content {
-    flex-grow: 1; /* Chiếm hết phần còn lại */
+    flex-grow: 1; 
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -184,9 +184,9 @@ img {
     opacity: 0.6;
 }
 /* Màu sắc riêng cho từng thẻ */
-.earning .stat-icon i { color: #6f42c1; } /* Tím */
-.sales .stat-icon i { color: #28a745; } /* Xanh lá */
-.users .stat-icon i { color: #17a2b8; } /* Xanh biển */
+.earning .stat-icon i { color: #6f42c1; } 
+.sales .stat-icon i { color: #28a745; } 
+.users .stat-icon i { color: #17a2b8; }
 
 /* Khu vực 2 biểu đồ (dùng ảnh) */
 .charts-area {
@@ -218,7 +218,7 @@ img {
     height: auto;
 }
 
-/* ======== CSS MỚI CHO FORM (Thêm vào cuối file admin.css) ======== */
+/* ======== CSS MỚI CHO FORM  ======== */
 
 /* Link "Product Information" */
 .form-info-link {
@@ -311,7 +311,7 @@ img {
     background-color: #0056b3;
 }
 
-/* Nút Exit (Cũng màu xanh, theo thiết kế) */
+/* Nút Exit  */
 .btn-exit {
     background-color: #007bff;
     color: white;
@@ -319,16 +319,9 @@ img {
 .btn-exit:hover {
     background-color: #0056b3;
 }
-/* Nếu muốn nút Exit màu xám:
-.btn-exit {
-    background-color: #6c757d;
-    color: white;
-}
-.btn-exit:hover {
-    background-color: #5a6268;
-}
+
 */
-/* ======== CSS MỚI CHO TRANG QUẢN LÝ SẢN PHẨM (Thêm vào cuối file admin.css) ======== */
+/* ======== CSS MỚI CHO TRANG QUẢN LÝ SẢN PHẨM  ======== */
 
 /* Thanh Filter */
 .product-filters {
